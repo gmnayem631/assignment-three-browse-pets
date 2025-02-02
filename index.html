@@ -46,19 +46,98 @@
       .font-sora {
         font-family: "Sora", serif;
       }
-      .font.adlam {
+      .font-adlam {
         font-family: "ADLaM Display", serif;
+      }
+      .cat {
+        height: 50%;
+        width: 80%;
       }
     </style>
   </head>
   <body class="font-sora">
     <!-- Header section -->
-    <header>
-      <nav></nav>
+    <header class="container mx-auto bg-[#FFF9F4]">
+      <!-- Navigation Bar -->
+      <nav>
+        <div class="navbar">
+          <div class="navbar-start">
+            <img src="assets/logo-header.png" alt="" />
+            <a class="text-2xl ml-3"
+              >Browse<span class="text-[#FFDC26]">4</span>Pets</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Find a Pet</a></li>
+              <li><a>Breeds</a></li>
+              <li><a>Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end gap-3 hidden sm:flex">
+            <i class="fa-regular fa-bell text-2xl"></i>
+            <i class="fa-solid fa-magnifying-glass text-2xl"></i>
+            <a class="btn btn-outline btn-warning">Login</a>
+            <a class="btn btn-warning">Register</a>
+          </div>
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 -ml-10 shadow"
+            >
+              <li><a>Find a Pet</a></li>
+              <li><a>Breeds</a></li>
+              <li><a>Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
     </header>
 
     <!-- Main section -->
-    <main></main>
+    <main class="container mx-auto">
+      <section class="relative mt-16 flex flex-col gap-4">
+        <div class="z-20">
+          <p class="font-adlam text-5xl mt-4">
+            Pamper Your Pet, <br />Because They Deserve <br />
+            the Bes
+          </p>
+          <p class="text-xl mt-4">
+            Discover a world of treats, toys, and essentials handpicked for
+            <br />
+            your furry friends. Shop now and make tails wag with joy!
+          </p>
+          <button class="bg-[#FFDC26] text-xl py-3 px-5 rounded-lg mt-4">
+            Find a Pet
+          </button>
+        </div>
+        <div>
+          <img
+            src="assets/cat-big.png"
+            alt=""
+            class="absolute left-4 top-16 z-10"
+          />
+        </div>
+      </section>
+    </main>
 
     <!-- Footer section -->
     <footer></footer>
