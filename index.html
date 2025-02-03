@@ -30,6 +30,16 @@
             backgroundImage: {
               "banner-image": "url('./assets/cat-big.png')",
             },
+            keyframes: {
+              fadeSlide: {
+                "0%": { opacity: "0", transform: "translateY(30px)" },
+                "50%": { opacity: "1", transform: "translateY(0px)" },
+                "100%": { opacity: "0", transform: "translateY(30px)" },
+              },
+            },
+            animation: {
+              "fade-slide": "fadeSlide 2s ease-in-out infinite",
+            },
           },
         },
       };
@@ -121,12 +131,14 @@
     </header>
 
     <!-- Main section -->
-    <main class="container mx-auto">
+    <main class="container mx-auto relative">
       <section
         class="bg-[url('assets/cat-big.png')] bg-cover bg-right-bottom bg-no-repeat lg:h-[749px] lg:w-4/5 mx-auto mt-24"
       >
         <div class="w-1/2 flex flex-col gap-4">
-          <h2 class="font-adlam text-5xl">
+          <h2
+            class="font-adlam text-5xl opacity-0 translate-y-8 animate-fade-slide"
+          >
             Pamper Your Pet, <br />
             Because They Deserve <br />
             the Bes
@@ -235,6 +247,17 @@
           </div>
         </div>
       </section>
+
+      <!-- My Section -->
+      <div class="diff aspect-[16/9] mt-12">
+        <div class="diff-item-1">
+          <img alt="daisy" src="assets/pet-collection.jpg" />
+        </div>
+        <div class="diff-item-2">
+          <img alt="daisy" src="assets/pet-collection-2.webp" />
+        </div>
+        <div class="diff-resizer"></div>
+      </div>
 
       <!-- Trending Pet Products section -->
       <section class="bg-[#FFF9F4] p-36 mt-36">
@@ -460,7 +483,7 @@
       </section>
 
       <!-- Low Price section -->
-      <section class="mt-36 lg:px-36">
+      <section class="mt-36 lg:mb-80 lg:px-36">
         <h3 class="font-adlam text-3xl">Everyday low Price</h3>
 
         <!-- Gradient Card container -->
@@ -496,8 +519,14 @@
       </section>
 
       <!-- Pawsome News section -->
-      <section class="w-4/5 bg-[#FFF9F4] mx-auto flex gap-28 py-9 px-24">
-        <img src="assets/cute-pet-mid.png" alt="" />
+      <section
+        class="w-4/5 bg-[#FFF9F4] lg:mx-auto flex flex-col lg:flex-row lg:gap-28 lg:py-9 lg:px-24 rounded-2xl lg:absolute lg:left-36 lg:-bottom-[564px]"
+      >
+        <img
+          src="assets/cute-pet-mid.png"
+          alt=""
+          class="w-[190px] lg:w-[330px]"
+        />
 
         <!-- Text container -->
         <div class="flex flex-col gap-5 justify-center">
@@ -519,7 +548,11 @@
       </section>
     </main>
 
-    <footer class="footer bg-[#FFDC2680] text-base-content lg:mt-72 lg:p-44">
+    <footer
+      class="footer bg-[#FFDC2680] text-base-content lg:pt-80 lg:px-36 lg:pb-20 grid-cols-1 lg:grid-cols-3"
+    >
+      <!-- FAQ section -->
+
       <div class="flex flex-col">
         <!-- Logo content container -->
         <div class="flex items-center gap-3">
