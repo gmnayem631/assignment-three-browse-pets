@@ -61,7 +61,7 @@
   </head>
   <body class="font-sora text-font-primary">
     <!-- Header section -->
-    <header class="bg-[#FFF9F4] overflow-hidden px-36">
+    <header class="bg-[#FFF9F4] overflow-hidden lg:px-36">
       <!-- Navigation Bar -->
       <div class="navbar">
         <div class="navbar-start">
@@ -144,7 +144,7 @@
       </section>
 
       <!-- Browse category section -->
-      <section class="px-36 mt-36">
+      <section class="lg:px-36 mt-36">
         <h3 class="font-adlam text-3xl">Browse By Categories</h3>
 
         <!-- Card container -->
@@ -237,7 +237,7 @@
       </section>
 
       <!-- Trending Pet Products section -->
-      <section class="bg-[#FFF9F4] px-36 mt-36">
+      <section class="bg-[#FFF9F4] p-36 mt-36">
         <h3 class="font-adlam text-3xl">Trending Pet Products</h3>
 
         <!-- Card Container -->
@@ -460,7 +460,40 @@
       </section>
 
       <!-- Low Price section -->
-      <section></section>
+      <section class="mt-36 lg:px-36">
+        <h3 class="font-adlam text-3xl">Everyday low Price</h3>
+
+        <!-- Gradient Card container -->
+        <div class="grid lg:grid-cols-3 grid-cols-1 gap-6 mt-12 font-adlam">
+          <!-- Blue Card -->
+          <div
+            class="blue-card flex justify-between bg-gradient-to-tr from-[#F8CCFB] to-[#ACD2FD] col-span-2 rounded-xl"
+          >
+            <!-- Text container -->
+            <div class="flex gap-4 justify-center flex-col ps-6">
+              <h5 class="text-xl">Under Price</h5>
+              <h4 class="text-3xl">Pet Grooming Mitt</h4>
+              <p class="text-2xl text-white">(Easy Hair Removal)</p>
+              <p class="text-5xl">$7.99</p>
+            </div>
+            <!-- Image container -->
+            <div><img src="assets/cute-dog-mid.png" alt="" /></div>
+          </div>
+
+          <!-- Yellow card -->
+          <div
+            class="p-6 rounded-xl blue-card flex justify-between bg-[linear-gradient(134.71deg,_#FFF9F4_1.511%,_#F9DF8A_100%)]"
+          >
+            <!-- Text container -->
+            <div class="flex gap-4 items-center flex-col ps-6">
+              <h4 class="text-3xl text-black">T-Shirt for Dogs</h4>
+              <p class="text-[#FFDC26] text-5xl self-start">$7.99</p>
+            </div>
+            <!-- Image container -->
+            <div><img src="assets/cute-pet-mid.png" alt="" /></div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
