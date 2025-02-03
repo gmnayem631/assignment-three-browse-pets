@@ -1,9 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Browse Pets</title>
+
+    <!-- DaisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind V3 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind custom class -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "font-primary": "#111111",
+              "btn-primary": "#FFDC26",
+              "bg-primary": "rgba(255, 220, 38, 0.5)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Importing google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome script -->
+    <script
+      src="https://kit.fontawesome.com/b398c8b3fb.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Internal CSS for the file -->
+    <style>
+      .font-adlam {
+        font-family: "ADLaM Display", serif;
+      }
+      .font-sora {
+        font-family: "Sora", serif;
+      }
+    </style>
   </head>
-  <body></body>
+  <body class="font-sora">
+    <!-- Header section -->
+    <header class="bg-[#FFF9F4]">
+      <!-- Navigation Bar -->
+      <div class="navbar container mx-auto">
+        <div class="navbar-start">
+          <div class="flex items-center gap-3">
+            <img src="assets/logo-header.png" alt="" />
+            <a class="text-2xl"
+              >Browse<span class="text-[#FFDC26]">4</span>Pets</a
+            >
+          </div>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 text-text-primary text-lg">
+            <li><a>Find a Pet</a></li>
+            <li><a>Breed</a></li>
+            <li><a>Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <div class="lg:gap-3 hidden lg:flex">
+            <i class="fa-regular fa-bell text-2xl"></i>
+            <i class="fa-solid fa-magnifying-glass text-2xl"></i>
+            <button class="btn btn-outline btn-warning text-[#111111]">
+              Login
+            </button>
+            <a class="btn bg-[#FFDC26] hover:bg-transparent">Register</a>
+          </div>
+
+          <!-- Hamburger -->
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            >
+              <li><a>Find a Pet</a></li>
+              <li><a>Breed</a></li>
+              <li><a>Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
 </html>
